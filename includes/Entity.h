@@ -12,16 +12,18 @@ class Entity {
         int health;
         std::string name;
         float flat_damage;
+        int lvl;
 
     public:
-        Entity(std::string name, int health, float flat_damage);
+        Entity(std::string name, int health, float flat_damage, int lvl);
         virtual ~Entity() = default;
 
         virtual void attack(Entity* target) = 0;
 
-        bool is_alive();
+        bool is_alive() const;
         void take_damage(float damage);
         std::string get_name();
+        int get_lvl() const;
 };
 
 

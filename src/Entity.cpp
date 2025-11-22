@@ -5,13 +5,14 @@
 #include "../includes/Entity.h"
 
 
-Entity::Entity(std::string name, int health, float flat_damage) {
+Entity::Entity(std::string name, int health, float flat_damage, int lvl) {
     this->name = name;
     this->health = health;
     this->flat_damage = flat_damage;
+
 }
 
-bool Entity::is_alive() {
+bool Entity::is_alive() const {
     return (this->health > 0);
 }
 
@@ -26,3 +27,6 @@ std::string Entity::get_name() {
     return this->name;
 }
 
+int Entity::get_lvl() const {
+    return this->lvl;
+}

@@ -8,7 +8,7 @@
 #include "includes/Player.h"
 
 int main() {
-    Player *player = new Player("john", 100, 10);
+    Player *player = new Player("john", 100, 10, 1);
 
     std::string name = player->get_name();
     std::cout << name << std::endl;
