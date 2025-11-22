@@ -20,9 +20,10 @@ class Entity {
 
         virtual void attack(Entity* target) = 0;
 
-        bool is_alive();
+        bool is_alive() const;
         void take_damage(float damage);
         std::string get_name();
+        int get_lvl() const;
 };
 
 
