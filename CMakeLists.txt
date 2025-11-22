@@ -9,6 +9,6 @@ add_executable(malloc_mansion
         includes/Player.h
         src/Entity.cpp
         includes/Entity.h
-        src/Ennemy.cpp
-        includes/Ennemy.h
+        src/Enemy.cpp
+        includes/Enemy.h
 )
