@@ -9,7 +9,7 @@
 
 class Player : public Entity {
     public:
-        Player(std::string name, int health, float flat_damage);
+        Player(std::string name, int health, float flat_damage, int lvl);
         void attack(Entity *target) override;
 
 };

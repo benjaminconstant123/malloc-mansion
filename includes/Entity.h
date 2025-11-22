@@ -12,9 +12,10 @@ class Entity {
         int health;
         std::string name;
         float flat_damage;
+        int lvl;
 
     public:
-        Entity(std::string name, int health, float flat_damage);
+        Entity(std::string name, int health, float flat_damage, int lvl);
         virtual ~Entity() = default;
 
         virtual void attack(Entity* target) = 0;

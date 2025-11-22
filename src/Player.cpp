@@ -7,7 +7,7 @@
 #include <iostream>
 #include <ostream>
 
-Player::Player(std::string name, int health, float flat_damage) : Entity(name, health, flat_damage) {
+Player::Player(std::string name, int health, float flat_damage, int lvl) : Entity(name, health, flat_damage, lvl) {
 
 }
 
