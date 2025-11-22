@@ -4,9 +4,13 @@
 
 #ifndef MALLOC_MANSION_ENEMY_H
 #define MALLOC_MANSION_ENEMY_H
+#include "Entity.h"
 
 
-class Enemy {
+class Enemy : public Entity{
+    public:
+        Enemy(std::string name, int health, float flat_damage);
+        void attack(Entity *target) override;
 };
 
 
