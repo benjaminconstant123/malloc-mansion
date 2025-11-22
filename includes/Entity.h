@@ -21,7 +21,8 @@ class Entity {
         virtual void attack(Entity* target) = 0;
 
         bool is_alive() const;
-        void take_damage(float damage);
+        int get_health() const;
+        int take_damage(float damage);
         std::string get_name();
         int get_lvl() const;
 };

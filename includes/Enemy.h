@@ -9,7 +9,7 @@
 
 class Enemy : public Entity{
     public:
-        Enemy(std::string name, int health, float flat_damage);
+        Enemy(std::string name, int health, float flat_damage, int lvl);
         void attack(Entity *target) override;
 };
 

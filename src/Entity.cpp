@@ -9,18 +9,25 @@ Entity::Entity(std::string name, int health, float flat_damage, int lvl) {
     this->name = name;
     this->health = health;
     this->flat_damage = flat_damage;
-
 }
 
 bool Entity::is_alive() const {
     return (this->health > 0);
 }
 
-void Entity::take_damage(float damage) {
-    this->health -= static_cast<int>(damage);
+int Entity::get_health() const {
+    return this->health;
+}
+
+int Entity::take_damage(float damage) {
+    int round_damage = static_cast<int>(damage);
+    int taken_damage = round_damage;
+    this->health -= round_damage;
     if (this->health <= 0) {
+        taken_damage = round_damage + this->health;
         this->health = 0;
     }
+    return taken_damage;
 }
 
 std::string Entity::get_name() {
