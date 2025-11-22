@@ -4,4 +4,9 @@ project(malloc_mansion)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(malloc_mansion
-        main.cpp)
+        main.cpp
+        src/Player.cpp
+        includes/Player.h
+        src/Entity.cpp
+        includes/Entity.h
+)
