@@ -15,4 +15,6 @@ add_executable(malloc_mansion
         includes/Inventory.h
         src/Item/Item.cpp
         includes/Item/Item.h
+        src/Item/HealingPotion.cpp
+        includes/Item/HealingPotion.h
 )

@@ -8,8 +8,9 @@
 
 
 class Entity {
-        protected:
+protected:
         int health;
+        int max_health;
         std::string name;
         float flat_damage;
         int lvl;
@@ -22,6 +23,7 @@ class Entity {
 
         bool is_alive() const;
         int get_health() const;
+        int get_max_health() const;
         void set_health(int hp);
         int take_damage(float damage);
         std::string get_name();

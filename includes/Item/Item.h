@@ -12,10 +12,14 @@ private:
     int quantity;
 
 public:
+    explicit Item(int quantity); //jsp pk explicit mais sinon il se plaint
+    int get_quantity();
+    void set_quantity(int quantity);
+
     virtual ~Item() = default;
 
     virtual bool use(Entity* target);
-    // renvois vrai si l'item est détruit, faux sinon
+    // renvois vrai si l'item doit être détruit (qte =0), faux sinon
 };
 
 

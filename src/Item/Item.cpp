@@ -3,3 +3,15 @@
 //
 
 #include "../../includes/Item/Item.h"
+
+Item::Item(int quantity) {
+    this->quantity = quantity;
+}
+
+int Item::get_quantity() {
+    return this->quantity;
+}
+
+void Item::set_quantity(int quantity) {
+    this->quantity = quantity;
+}

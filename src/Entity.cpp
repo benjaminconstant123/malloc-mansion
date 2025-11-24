@@ -8,6 +8,7 @@
 Entity::Entity(std::string name, int health, float flat_damage, int lvl) {
     this->name = name;
     this->health = health;
+    this->max_health = health;
     this->flat_damage = flat_damage;
 }
 
@@ -19,7 +20,14 @@ int Entity::get_health() const {
     return this->health;
 }
 
+int Entity::get_max_health() const {
+    return this->max_health;
+}
+
 void Entity::set_health(int hp) {
+    if (hp > get_max_health()) {
+        this->health = max_health;
+    }
     this->health = hp;
 }
 
