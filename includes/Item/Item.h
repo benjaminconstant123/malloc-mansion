@@ -8,7 +8,7 @@
 
 
 class Item {
-private:
+protected:
     int quantity;
 
 public:

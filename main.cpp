@@ -7,14 +7,15 @@
 
 #include "includes/Enemy.h"
 #include "includes/Player.h"
+#include "includes/Item/HealingPotion.h"
 
 int main() {
     Player *player = new Player("john", 100, 10, 1);
     Enemy *enemy = new Enemy("jerome le monstre", 20,15,1);
 
-    for (int i = 0; i < 10 && enemy->is_alive(); i++) {
-        player->attack(enemy);
-    }
+    player->take_damage(50);
+    HealingPotion *potion = new HealingPotion(5);
+    potion->use(player);
 
     std::string name = player->get_name();
     std::cout << name << std::endl;

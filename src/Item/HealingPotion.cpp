@@ -8,6 +8,8 @@
 #include <ostream>
 #define HEALING 40
 
+HealingPotion::HealingPotion(int quantity):Item(quantity){
+}
 
 bool HealingPotion::use(Entity* target){
     bool destroyed = get_quantity()<1;

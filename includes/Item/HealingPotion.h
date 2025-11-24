@@ -9,6 +9,8 @@
 
 class HealingPotion : Item {
 
+public:
+    explicit HealingPotion(int quantity);
     bool use(Entity* target) override;
 };
 
