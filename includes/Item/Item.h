@@ -18,7 +18,7 @@ public:
 
     virtual ~Item() = default;
 
-    virtual bool use(Entity* target);
+    virtual bool use(Entity* target) = 0;
     // renvois vrai si l'item doit être détruit (qte =0), faux sinon
 };
 
