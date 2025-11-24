@@ -19,6 +19,10 @@ int Entity::get_health() const {
     return this->health;
 }
 
+void Entity::set_health(int hp) {
+    this->health = hp;
+}
+
 int Entity::take_damage(float damage) {
     int round_damage = static_cast<int>(damage);
     int taken_damage = round_damage;

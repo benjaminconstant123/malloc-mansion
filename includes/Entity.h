@@ -22,6 +22,7 @@ class Entity {
 
         bool is_alive() const;
         int get_health() const;
+        void set_health(int hp);
         int take_damage(float damage);
         std::string get_name();
         int get_lvl() const;
