@@ -13,7 +13,7 @@ protected:
 
 public:
     explicit Item(int quantity); //jsp pk explicit mais sinon il se plaint
-    int get_quantity();
+    int get_quantity() const;
     void set_quantity(int quantity);
 
     virtual ~Item() = default;

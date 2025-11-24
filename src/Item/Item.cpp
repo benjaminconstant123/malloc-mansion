@@ -8,7 +8,7 @@ Item::Item(int quantity) {
     this->quantity = quantity;
 }
 
-int Item::get_quantity() {
+int Item::get_quantity() const {
     return this->quantity;
 }
 
