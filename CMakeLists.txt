@@ -13,4 +13,6 @@ add_executable(malloc_mansion
         includes/Enemy.h
         src/Inventory.cpp
         includes/Inventory.h
+        src/Item/Item.cpp
+        includes/Item/Item.h
 )
