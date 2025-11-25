@@ -5,13 +5,13 @@
 #include "../../includes/Item/Item.h"
 
 Item::Item(int quantity) {
-    this->quantity = quantity;
+    this->m_quantity = quantity;
 }
 
 int Item::get_quantity() const {
-    return this->quantity;
+    return this->m_quantity;
 }
 
-void Item::set_quantity(int quantity) {
-    this->quantity = quantity;
+void Item::set_quantity(const int quantity) {
+    this->m_quantity = quantity;
 }
