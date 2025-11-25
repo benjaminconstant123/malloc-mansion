@@ -13,11 +13,9 @@ Player::Player(std::string name, int health, float flat_damage, int lvl) : Entit
 
 void Player::attack(Entity *target) {
     std::cout << "--- TOUR DU JOUEUR ---" << std::endl;
-
     int taken_damage = target->take_damage(this->flat_damage);
-    std::cout << target->get_name() << " a perdu " << taken_damage <<"HP"<< std::endl;
-
+    std::cout << target->get_name() << " a pris " << taken_damage << " degats, sa vie est de " << target->get_health() << " ---" << std::endl;
     if (!target->is_alive()) {
-        std::cout << "--- Le monstre est ded, le bro est canne ---" << std::endl;
+        std::cout << "--- " << target->get_name() << " est ded, le bro est canne ---" << std::endl;
     }
 }
