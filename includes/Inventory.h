@@ -10,16 +10,18 @@
 
 class Inventory {
     protected:
-    std::vector<Item *> m_items;
-    int m_size;
+        std::vector<Item *> m_items;
+        int m_size;
     public:
-    explicit Inventory(int size);               //force le complilateur a NE pas convertier les types
-    void set_size(int size);                    //pour set la taile de l'inventaire
-    void set_items(std::vector<Item *> items);  //pour set plein d'item
-    std::vector<Item *> get_items() const;      //pour get plein d'item
-    void add_item(Item *item);                  //pour add un seul item
-    void remove_item(Item *item);               //pour remove un item
-
+        explicit Inventory(int size);               //force le complilateur a NE pas convertier les types
+        ~Inventory();
+        void set_size(int size);                    //pour set la taile de l'inventaire
+        void set_items(std::vector<Item *> items);  //pour set plein d'item
+        std::vector<Item *> get_items() const;      //pour get plein d'item
+        void add_item(Item *item);                  //pour add un seul item
+        void remove_item(Item *item);               //pour remove un item
+        std::string to_string();
+        void use_item(int index, Entity* target);
 };
 
 

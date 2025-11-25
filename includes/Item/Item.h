@@ -9,12 +9,14 @@
 
 class Item {
 protected:
+    std::string m_name;
     int m_quantity;
 
 public:
-    explicit Item(int quantity);            //jsp pk explicit mais sinon il se plaint
+    Item(int quantity, std::string);
     int get_quantity() const;
     void set_quantity(int quantity);
+    std::string get_name() const;
 
     virtual ~Item() = default;
 

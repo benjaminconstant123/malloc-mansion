@@ -4,13 +4,20 @@
 
 #ifndef MALLOC_MANSION_PLAYER_H
 #define MALLOC_MANSION_PLAYER_H
+
 #include "Entity.h"
+#include "Inventory.h"
 
 
 class Player : public Entity {
+
+
     public:
         Player(std::string name, int health, float flat_damage, int lvl);
         void attack(Entity *target) override;
+        Inventory inventory = Inventory(10);
+    private:
+
 
 };
 

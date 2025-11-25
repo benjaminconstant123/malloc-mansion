@@ -1,28 +1,33 @@
-    //
-    // Created by benja on 22/11/2025.
-    //
+//
+// Created by benja on 22/11/2025.
+//
 
-    #include <iostream>
-    #include <ostream>
+#include <iostream>
+#include <ostream>
 
-    #include "includes/Enemy.h"
-    #include "includes/Player.h"
-    #include "includes/Item/HealingPotion.h"
+#include "includes/Enemy.h"
+#include "includes/Player.h"
+#include "includes/Item/HealingPotion.h"
 
-    int main() {
-        Player *player = new Player("john", 100, 10, 1);
-        Enemy *enemy = new Enemy("jerome le monstre", 20,15,1);
 
-        player->take_damage(50);
-        HealingPotion *potion = new HealingPotion(5);
-        potion->use(player);
+int main() {
+    auto *player = new Player("john", 100, 10, 1);
+    auto *enemy = new Enemy("jerome le monstre", 20,15,1);
 
-        delete potion;
+    player->inventory.add_item(new HealingPotion(5, "la super popo"));
+    player->inventory.add_item(new HealingPotion(5, "caca prout"));
+    std::string out = player->inventory.to_string();
+    std::cout << out;
 
-        std::string name = player->get_name();
-        std::cout << name << std::endl;
+    enemy->attack(player);
+    std::cout << player->get_health()<< std::endl;
+    player->inventory.use_item(0, player);
+    std::cout << player->get_health()<< std::endl;
 
-        delete player;
-        delete enemy;
-        return 0;
-    }
+    std::string out2 = player->inventory.to_string();
+    std::cout << out2;
+
+    delete player;
+    delete enemy;
+    return 0;
+}

@@ -4,8 +4,9 @@
 
 #include "../../includes/Item/Item.h"
 
-Item::Item(int quantity) {
+Item::Item(int quantity, std::string name) {
     this->m_quantity = quantity;
+    this->m_name = name;
 }
 
 int Item::get_quantity() const {
@@ -14,4 +15,8 @@ int Item::get_quantity() const {
 
 void Item::set_quantity(const int quantity) {
     this->m_quantity = quantity;
+}
+
+std::string Item::get_name() const {
+    return this->m_name;
 }
