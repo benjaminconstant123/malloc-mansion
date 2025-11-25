@@ -7,10 +7,10 @@
 #include "Item.h"
 
 
-class HealingPotion : Item {
+class HealingPotion : public Item {
 
 public:
-    explicit HealingPotion(int quantity);
+    HealingPotion(int quantity, std::string name);
     bool use(Entity* target) override;
 };
 
