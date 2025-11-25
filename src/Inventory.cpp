@@ -4,27 +4,27 @@
 
 #include "../includes/Inventory.h"
 
-Inventory::Inventory(int size) {
-    this->size = size;
+Inventory::Inventory(const int size) {
+    this->m_size = size;
 }
 
-void Inventory::set_size(int size) {
-    this->size += size;
+void Inventory::set_size(const int size) {
+    this->m_size += size;
 }
 
 void Inventory::set_items(std::vector<Item *> items) {
-    //TODO : implementation a faire
+    this->m_items = std::move(items); // MOVE (Rapide : échange juste les pointeurs internes, imagine le vector il a 1000 Item *)
 }
 
 std::vector<Item *> Inventory::get_items() const {
-    //TODO : implementation a faire
+    return this->m_items;
 }
 
 void Inventory::add_item(Item *item) {
-    //TODO : implementation a faire
+    this->m_items.push_back(item); //utilisation de push_back de vector pour ajouter a la fin de la "liste"
 }
 
 void Inventory::remove_item(Item *item) {
-    //TODO : implementation a faire
+    //TODO : comment faire pour remove le bon item ??
 }
 

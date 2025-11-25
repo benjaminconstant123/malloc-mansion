@@ -10,10 +10,10 @@
 
 class Inventory {
     protected:
-    std::vector<Item *> items;
-    int size;
+    std::vector<Item *> m_items;
+    int m_size;
     public:
-    Inventory(int size);
+    explicit Inventory(int size); //force le complilateur a NE pas convertier les types
     void set_size(int size);
     void set_items(std::vector<Item *> items); //pour set plein d'item
     std::vector<Item *> get_items() const; //pour get plein d'item
