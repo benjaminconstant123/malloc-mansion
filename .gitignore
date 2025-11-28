@@ -1,2 +1,7 @@
 /cmake-build-debug
 .idea
+.cmake
+CMakeFiles
+CMakeCache.txt
+malloc_mansion
+Makefile
