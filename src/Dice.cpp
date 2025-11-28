@@ -23,3 +23,10 @@ int Dice::random_face() {
     std::uniform_int_distribution<> distrib(1, this->face);
     return distrib(gen);
 }
+
+std::string Dice::to_string() {
+    std::string result;
+    result.append("d");
+    result.append(std::to_string(this->face));
+    return result;
+}

@@ -6,6 +6,8 @@
 #define MALLOC_MANSION_ENTITY_H
 #include <string>
 
+#include "Dice.h"
+
 
 class Entity {
 protected:
@@ -19,7 +21,7 @@ protected:
         Entity(std::string name, int health, float flat_damage, int lvl);
         virtual ~Entity() = default;
 
-        virtual void attack(Entity* target) = 0;
+        virtual void attack(Entity* target, Dice* dice) = 0;
 
         bool is_alive() const;
         int get_health() const;

@@ -14,7 +14,7 @@ class Player : public Entity {
 
     public:
         Player(std::string name, int health, float flat_damage, int lvl);
-        void attack(Entity *target) override;
+        void attack(Entity *target, Dice *dice) override;
         Inventory inventory = Inventory(10);
     private:
 

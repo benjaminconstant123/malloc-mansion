@@ -5,6 +5,7 @@
 
 #ifndef MALLOC_MANSION_DICE_H
 #define MALLOC_MANSION_DICE_H
+#include <iostream>
 
 
 class Dice {
@@ -14,6 +15,7 @@ public:
     explicit Dice(int face);
     int get_face();
     int random_face();
+    std::string to_string();
 };
 
 

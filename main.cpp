@@ -13,27 +13,30 @@
 
 int main() {
     auto *player = new Player("john", 100, 10, 1);
-    auto *enemy = new Enemy("jerome le monstre", 20,15,1);
+    auto *enemy = new Enemy("jerome le monstre", 30,15,1);
+    auto *d6 = new Dice(6);
+    auto *d20 = new Dice(20);
 
     player->inventory.add_item(new HealingPotion(5, "la super popo"));
     player->inventory.add_item(new HealingPotion(5, "caca prout"));
     std::string out = player->inventory.to_string();
     std::cout << out;
 
-    enemy->attack(player);
+    enemy->attack(player, d6);
     std::cout << player->get_health()<< std::endl;
     player->inventory.use_item(0, player);
     std::cout << player->get_health()<< std::endl;
 
+    player->attack(enemy,d20);
+
     std::string out2 = player->inventory.to_string();
     std::cout << out2;
 
-    auto *d6 = new Dice(6);
+
     double esp_exp_6 = 0;
     for (int i = 0; i < 10000; ++i) {
         esp_exp_6 += d6->random_face();
     }
-    auto *d20 = new Dice(20);
     double esp_exp_20 = 0;
     for (int i = 0; i < 10000; ++i) {
         esp_exp_20 += d20->random_face();
